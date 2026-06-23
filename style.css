@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap');
+
+/* =====================
+   ROOT & BASE
+===================== */
+:root {
+  --snow: #F5F7FA;
+  --alpine: #1B3A5C;
+  --peak: #0D1F33;
+  --accent: #E63946;
+  --ice: #D6E8F5;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--snow);
+  color: var(--peak);
+}
+
+h1, h2, h3, h4, h5, .bebas {
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 2px;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  background-color: var(--peak) !important;
+}
+
+.navbar-brand {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+  color: white !important;
+}
+
+.navbar-brand span {
+  color: var(--accent);
+}
+
+.nav-link {
+  color: var(--ice) !important;
+  font-size: 0.82rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+  background: linear-gradient(150deg, var(--peak) 0%, var(--alpine) 70%, #2a6496 100%);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: var(--snow);
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+.hero-title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(3.5rem, 9vw, 8.5rem);
+  line-height: 0.92;
+  color: white;
+  letter-spacing: 4px;
+}
+
+.hero-title .accent {
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-size: 0.9rem;
+  color: var(--ice);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.btn-hero {
+  background-color: var(--accent);
+  border: none;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  padding: 12px 36px;
+  border-radius: 2px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-hero:hover {
+  background-color: #c1121f;
+  transform: translateY(-2px);
+  color: white;
+}
+
+.btn-outline-hero {
+  border: 2px solid white;
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  padding: 10px 36px;
+  border-radius: 2px;
+  background: transparent;
+  transition: all 0.2s;
+}
+
+.btn-outline-hero:hover {
+  background: white;
+  color: var(--peak);
+}
+
+/* =====================
+   SECTION LABELS
+===================== */
+.section-label {
+  font-size: 0.72rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  color: var(--peak);
+  letter-spacing: 2px;
+}
+
+/* =====================
+   STATS BAR
+===================== */
+.stats-bar {
+  background-color: var(--alpine);
+  padding: 48px 0;
+}
+
+.stat-number {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3.8rem;
+  color: white;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ice);
+  font-weight: 300;
+  margin-top: 4px;
+}
+
+/* =====================
+   CAROUSEL
+===================== */
+#serreCarousel {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(13,31,51,0.18);
+}
+
+.carousel-item img {
+  height: 480px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.carousel-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(13,31,51,0.88));
+  padding: 50px 36px 28px;
+}
+
+.carousel-overlay h5 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.carousel-overlay p {
+  color: var(--ice);
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+/* =====================
+   ACTIVITY CARDS
+===================== */
+.activity-card {
+  background: white;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(13,31,51,0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 100%;
+}
+
+.activity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(13,31,51,0.14);
+}
+
+.activity-card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.activity-card .card-body {
+  padding: 20px;
+}
+
+.activity-card .card-title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: var(--peak);
+  margin-bottom: 8px;
+}
+
+.activity-card .card-text {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.level-badge {
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+/* =====================
+   BOOKING FORM
+===================== */
+.booking-section {
+  background: white;
+}
+
+.form-label {
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--alpine);
+  margin-bottom: 6px;
+}
+
+.form-control, .form-select {
+  border: 1.5px solid #dce5ee;
+  border-radius: 2px;
+  padding: 11px 14px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--alpine);
+  box-shadow: 0 0 0 3px rgba(27,58,92,0.12);
+}
+
+.form-control.is-invalid, .form-select.is-invalid {
+  border-color: var(--accent);
+}
+
+.invalid-feedback {
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+.valid-feedback {
+  font-size: 0.78rem;
+}
+
+.btn-submit {
+  background-color: var(--alpine);
+  color: white;
+  border: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+  padding: 13px 40px;
+  border-radius: 2px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-submit:hover {
+  background-color: var(--peak);
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* =====================
+   MODAL
+===================== */
+.modal-header {
+  background-color: var(--peak);
+  border-bottom: none;
+  padding: 20px 28px;
+}
+
+.modal-title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.modal-body {
+  padding: 28px;
+}
+
+.modal-body p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.modal-body ul li {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.btn-modal-close {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  padding: 10px 28px;
+  border-radius: 2px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background-color: var(--peak);
+  padding: 60px 0 0;
+}
+
+footer h5 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+footer p, footer a, footer li {
+  color: var(--ice);
+  font-size: 0.85rem;
+  text-decoration: none;
+  line-height: 2;
+  list-style: none;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(214,232,245,0.12);
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.75rem;
+  color: rgba(214,232,245,0.4);
+  letter-spacing: 1px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 260px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .stat-number {
+    font-size: 2.8rem;
+  }
+}
